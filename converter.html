@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>converter</title>
+</head>
+<body>
+<table border="1" align="center">
+	<tr><td align="center">Converter</td></tr>
+	<tr><td><select id="one">
+		<option value="ctok">Celsius to Kelvin</option>
+		<option value="ktoc">Kelvin to Celsius</option>
+		<option>temp(G - K)</option>
+		<option>temp(K - G)</option>
+		<option>temp(F - C)</option>
+		<option>temp(M - K)</option>
+		<option>temp(K - M)</option>
+		</select></td></tr>
+		<tr><td>value: <input type="text" id="v1"></td></tr>
+		<tr><td>Result:<input type="text" id="result"></td></tr>
+		<tr><td><input type="button"  value="Convert" onclick="changes()"></td></tr>
+</table>
+		<script type="text/javascript">
+			function changes() {
+				result.value=(one.value=="ctok")? parseInt(v1.value)+273:(one.value=="ktoc")?parseInt(v1.value)-273:'';
+			}
+		</script>
+</body>
+</html>
